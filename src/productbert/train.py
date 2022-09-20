@@ -6,7 +6,7 @@ import data_loader.data_loaders as module_data
 import model.loss as module_loss
 import model.metric as module_metric
 from parse_config import ConfigParser
-from trainer import Trainer, TrainerJoint, DistilTrainer
+from trainer import TrainerJoint
 
 import transformers
 
@@ -60,24 +60,13 @@ def main(config):
 
     trainer_type = config['trainer']['type']
 
-    if trainer_type == 'distil':
-        trainer = DistilTrainer(model, criterion, metrics, optimizer,
-                          config=config,
-                          data_loader=data_loader,
-                          valid_data_loader=valid_data_loader,
-                          lr_scheduler=lr_scheduler)
-    elif trainer_type == 'joint':
-        trainer = TrainerJoint(model, criterion, metrics, optimizer,
-                          config=config,
-                          data_loader=data_loader,
-                          valid_data_loader=valid_data_loader,
-                          lr_scheduler=lr_scheduler)
-    else:
-        trainer = Trainer(model, criterion, metrics, optimizer,
-                          config=config,
-                          data_loader=data_loader,
-                          valid_data_loader=valid_data_loader,
-                          lr_scheduler=lr_scheduler)
+
+    trainer = TrainerJoint(model, criterion, metrics, optimizer,
+                        config=config,
+                        data_loader=data_loader,
+                        valid_data_loader=valid_data_loader,
+                        lr_scheduler=lr_scheduler)
+    
 
     trainer.train()
 

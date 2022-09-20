@@ -117,7 +117,7 @@ class JointBertModelLogit(BaseModel):
             logits_multi2 = self.multi2_cls_layer(torch.mean(sent2_emb[j], 0))
             res_multi1.append(logits_multi1)
             res_multi2.append(logits_multi2)
-            batched_main.append(weighted_sum)
+            batched_main.append(torch.squeeze(weighted_sum))
         logits_binary = self.cls_layer(torch.stack(batched_main))
         multi1_t = torch.stack(res_multi1)
         multi2_t = torch.stack(res_multi2)
