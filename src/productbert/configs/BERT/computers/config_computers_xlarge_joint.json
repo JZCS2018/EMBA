@@ -14,7 +14,7 @@
             "data_dir": "data/",
             "file": "../../data/processed/wdc-lspc/bert/preprocessed_computers_train_xlarge_bert_cutBTDS.pkl.gz",
             "valid_file": "../../data/raw/wdc-lspc/validation-sets/computers_valid_xlarge.csv",
-            "batch_size": 32,
+            "batch_size": 8,
             "valid_batch_size": 32,
             "shuffle": true,
             "validation_split": -1,
