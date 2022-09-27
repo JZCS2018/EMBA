@@ -72,6 +72,9 @@ class ConfigParser:
         if args.config and resume:
             # update new config for fine-tuning
             config.update(read_json(args.config))
+        if args.sdirname:
+            config['trainer']['save_dir'] += args.sdirname
+        
 
         # parse custom cli options into dictionary
         modification = {opt.target : getattr(args, _get_opt_name(opt.flags)) for opt in options}
