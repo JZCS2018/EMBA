@@ -1,15 +1,16 @@
 declare -a StringArray=("JointBERT-FT-shoes-small" "JointBERT-FT-shoes-medium" "JointBERT-FT-shoes-large" 
-"JointBERT-FT-shoes-xlarge" "JointBERT-FT-watches-small" "JointBERT-FT-watches-medium" "JointBERT-FT-watches-large" 
-"JointBERT-FT-watches-xlarge")
+"JointBERT-FT-shoes-xlarge" )
+# "JointBERT-FT-watches-small" "JointBERT-FT-watches-medium" "JointBERT-FT-watches-large" 
+# "JointBERT-FT-watches-xlarge")
 
-commd="python test_joint.py --sdirname test/ --device 0 -c configs/BERT"
+commd="python test_joint.py --sdirname AOA/ --device 0 -c configs/jointbert"
 
 
 
 for dire in "${StringArray[@]}"
 
 do 
-search_dir="saved/models/$(basename "$dire")"
+search_dir="saved/AOA/models/$(basename "$dire")"
 
 if [[ $search_dir == *"shoes"* ]]; then
 
