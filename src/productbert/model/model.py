@@ -51,6 +51,7 @@ from torch.nn.utils.rnn import pad_sequence
 
 #         return logits_binary, multi1, multi2
 
+### AOA
 class JointBertModelLogit(BaseModel):
     def __init__(self, num_classes_multi, num_classes=1, freeze_bert=False):
         super().__init__()
