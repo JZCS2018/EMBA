@@ -78,7 +78,8 @@ target/
 
 # exclude data from source control by default
 /data/
-
+/res/
+/em/
 # exclude cache from source control by default
 /cache/
 
