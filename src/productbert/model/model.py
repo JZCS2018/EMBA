@@ -368,7 +368,7 @@ class RobertaModelLogit(BaseModel):
             else:
                 lst_seq2_ind = 512
             sent1_emb.append(temp[i][1:lst_seq1_ind][:])
-            sent2_emb.append(temp[i][sep_index+1 : sep_index+1+lst_seq2_ind][:])
+            sent2_emb.append(temp[i][sep_index+2 : sep_index+2+lst_seq2_ind][:])
             # sent1_emb.append(torch.unsqueeze(temp[i][1:lst_seq1_ind][:], 0))
             # sent2_emb.append(torch.unsqueeze(temp[i][sep_index+1 : sep_index+1+lst_seq2_ind][:], 0))
 
@@ -387,7 +387,9 @@ class RobertaModelLogit(BaseModel):
             logits_multi2 = self.multi2_cls_layer(torch.mean(sent2_emb[j], 0))
             res_multi1.append(logits_multi1)
             res_multi2.append(logits_multi2)
-            batched_main.append(torch.squeeze(weighted_sum) + pooler_output[j])
+            # batched_main.append(torch.squeeze(weighted_sum) + pooler_output[j])
+            batched_main.append(torch.squeeze(weighted_sum))
+
         logits_binary = self.cls_layer(torch.stack(batched_main))
         multi1_t = torch.stack(res_multi1)
         multi2_t = torch.stack(res_multi2)
