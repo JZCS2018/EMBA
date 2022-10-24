@@ -355,8 +355,8 @@ class RobertaModelLogit(BaseModel):
         for i in range (len(seq)):
             lst = seq[i].tolist()
             sep_index = lst.index(2)
-            lst_seq1 = lst[0:sep_index]
-            lst_seq2 = lst[sep_index+1:]
+            lst_seq1 = lst[1:sep_index]
+            lst_seq2 = lst[sep_index+2:]
             # first sentence For Roberta, 1 is padding
             if 1 in lst_seq1:
                 lst_seq1_ind = lst_seq1.index(1)
