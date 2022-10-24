@@ -62,3 +62,26 @@ class BertDataLoaderJoint(BaseDataLoader):
             valid_ids = pd.read_csv(valid_file)
             self.valid_ids = valid_ids['pair_id'].tolist()
         super().__init__(self.dataset, batch_size, shuffle, validation_split, num_workers, collate_fn=data_collator)
+
+
+# class BertDataLoader(BaseDataLoader):
+#     """
+#     DataLoader for BERT encoded sequences
+#     """
+
+#     def __init__(self, data_dir, batch_size, file, valid_file=None, valid_batch_size=None, shuffle=True,
+#                  validation_split=-1, num_workers=1, tokenizer_name='bert-base-uncased', max_length=None, mlm=False):
+#         self.data_dir = data_dir
+#         self.max_length = max_length
+#         self.tokenizer_name = tokenizer_name
+#         self.dataset = BertDataset(file, self.tokenizer_name, self.max_length)
+#         self.valid_batch_size = valid_batch_size
+#         self.mlm = mlm
+
+#         data_collator = DataCollatorWithPadding(
+#             tokenizer=self.dataset.tokenizer, mlm=self.mlm)
+
+#         if validation_split == -1:
+#             valid_ids = pd.read_csv(valid_file)
+#             self.valid_ids = valid_ids['pair_id'].tolist()
+#         super().__init__(self.dataset, batch_size, shuffle, validation_split, num_workers, collate_fn=data_collator)

@@ -358,14 +358,16 @@ class TrainerJointAOA(BaseTrainer):
         self.model.zero_grad()
         acc_loss, acc_output, acc_target, acc_output_multi1, acc_output_multi2, acc_target_multi1, acc_target_multi2 = 0.0, None, None, None, None, None, None
         for batch_idx, inputs in enumerate(self.data_loader):
-            data, token_ids, attn_mask, target, target_multi1, target_multi2 = inputs['input_ids'].to(self.device), inputs['token_type_ids'].to(self.device), inputs['attention_mask'].to(self.device), inputs['labels'].to(self.device), inputs['label_multi1'].to(self.device), inputs['label_multi2'].to(self.device)
+            # data, token_ids, attn_mask, target, target_multi1, target_multi2 = inputs['input_ids'].to(self.device), inputs['token_type_ids'].to(self.device), inputs['attention_mask'].to(self.device), inputs['labels'].to(self.device), inputs['label_multi1'].to(self.device), inputs['label_multi2'].to(self.device)
+
+            data, attn_mask, target, target_multi1, target_multi2 = inputs['input_ids'].to(self.device), inputs['attention_mask'].to(self.device), inputs['labels'].to(self.device), inputs['label_multi1'].to(self.device), inputs['label_multi2'].to(self.device)
 
             target = target.transpose(0, 1)
             target_multi1 = target_multi1.transpose(0, 1).squeeze()
             target_multi2 = target_multi2.transpose(0, 1).squeeze()
 
             with autocast():
-                output_binary, output_multi1, output_multi2 = self.model(data, token_ids, attn_mask)
+                output_binary, output_multi1, output_multi2 = self.model(data, attn_mask)
 
                 multi1_proba = torch.exp(output_multi1)
                 _, multi1_pred = multi1_proba.max(1)
@@ -504,14 +506,16 @@ class TrainerJointAOA(BaseTrainer):
         self.valid_metrics.reset()
         with torch.no_grad():
             for batch_idx, inputs in enumerate(self.valid_data_loader):
-                data, token_ids, attn_mask, target, target_multi1, target_multi2 = inputs['input_ids'].to(self.device), inputs['token_type_ids'].to(self.device), inputs['attention_mask'].to(self.device), inputs['labels'].to(self.device), inputs['label_multi1'].to(self.device), inputs['label_multi2'].to(self.device)
+                data, attn_mask, target, target_multi1, target_multi2 = inputs['input_ids'].to(self.device), inputs['attention_mask'].to(self.device), inputs['labels'].to(self.device), inputs['label_multi1'].to(self.device), inputs['label_multi2'].to(self.device)
 
                 target = target.transpose(0, 1)
                 target_multi1 = target_multi1.transpose(0, 1).squeeze()
                 target_multi2 = target_multi2.transpose(0, 1).squeeze()
 
                 with autocast():
-                    output_binary, output_multi1, output_multi2 = self.model(data, token_ids, attn_mask)
+                    # output_binary, output_multi1, output_multi2 = self.model(data, token_ids, attn_mask)
+                    output_binary, output_multi1, output_multi2 = self.model(data, attn_mask)
+
 
                     multi1_proba = torch.exp(output_multi1)
                     _, multi1_pred = multi1_proba.max(1)

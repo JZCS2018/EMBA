@@ -35,3 +35,5 @@ python train.py --device 0 -m AOA/ -c configs/BERT/shoes/config_shoes_medium_joi
 # python train.py --device 0 -c configs/BERT/dblpscholar/config_dblpscholar_joint.json --lr 3e-5
 # python train.py --device 0 -c configs/BERT/dblpscholar/config_dblpscholar_joint.json --lr 8e-5
 # python train.py --device 0 -c configs/BERT/dblpscholar/config_dblpscholar_joint.json --lr 1e-4
+
+python train.py --device 0 -m Roberta/ -c configs/Roberta/computers/config_computers_small.json --lr 1e-4
