@@ -26,7 +26,7 @@ class BertDataLoader(BaseDataLoader):
     """
 
     def __init__(self, data_dir, batch_size, file, valid_file=None, valid_batch_size=None, shuffle=True,
-                 validation_split=-1, num_workers=1, tokenizer_name='bert-base-uncased', max_length=None, mlm=False):
+                 validation_split=-1, num_workers=1, tokenizer_name='roberta-base', max_length=None, mlm=False):
         self.data_dir = data_dir
         self.max_length = max_length
         self.tokenizer_name = tokenizer_name
