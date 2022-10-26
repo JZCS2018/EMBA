@@ -388,7 +388,9 @@ class RobertaModelLogit(BaseModel):
             res_multi1.append(logits_multi1)
             res_multi2.append(logits_multi2)
             # batched_main.append(torch.squeeze(weighted_sum) + pooler_output[j])
+            # batched_main.append(torch.squeeze(weighted_sum) + torch.mean(sent1_emb[j], 0) + torch.mean(sent2_emb[j], 0))
             batched_main.append(torch.squeeze(weighted_sum))
+
         logits_binary = self.cls_layer(torch.stack(batched_main))
         multi1_t = torch.stack(res_multi1)
         multi2_t = torch.stack(res_multi2)
