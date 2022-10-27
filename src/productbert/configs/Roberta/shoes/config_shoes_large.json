@@ -4,7 +4,9 @@
 
     "arch": {
         "type": "RobertaModelLogit",
-        "args": {}
+        "args": {
+            "num_classes_multi": 563
+        }
     },
     "data_loader": {
         "type": "BertDataLoader",
@@ -33,7 +35,7 @@
     "loss": "BCEWithLogitsLoss",
     "pos_neg_ratio": 6,
     "metrics": [
-        "accuracy","tp","fp","tn","fn"
+        "accuracy","accuracy_multi1","accuracy_multi2","tp","fp","tn","fn","tp_multibin","fp_multibin","tn_multibin","fn_multibin"
     ],
     "lr_scheduler": {
         "type": "get_linear_schedule_with_warmup",
