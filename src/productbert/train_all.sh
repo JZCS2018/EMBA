@@ -15,14 +15,14 @@ python train.py --device 0 -m ABLavg/ -c configs/BERT/computers/config_computers
 python train.py --device 0 -m ABLavg/ -c configs/BERT/computers/config_computers_medium_joint.json --lr 3e-5
 python train.py --device 0 -m ABLavg/ -c configs/BERT/computers/config_computers_small_joint.json --lr 3e-5
 
-python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_large_joint.json --lr 3e-5
-python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_medium_joint.json --lr 3e-5
-python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_small_joint.json --lr 3e-5
+# python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_large_joint.json --lr 3e-5
+# python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m ABLavg/ -c configs/BERT/cameras/config_cameras_small_joint.json --lr 3e-5
 
 
-python train.py --device 0 -m ABLavg/ -c configs/BERT/abtbuy/config_abtbuy_joint.json --lr 3e-5
-python train.py --device 0 -m ABLavg/ -c configs/BERT/dblpscholar/config_cameras_joint.json --lr 3e-5
-python train.py --device 0 -m ABLavg/ -c configs/BERT/company/config_company_joint.json --lr 3e-5
+# python train.py --device 0 -m ABLavg/ -c configs/BERT/abtbuy/config_abtbuy_joint.json --lr 3e-5
+# python train.py --device 0 -m ABLavg/ -c configs/BERT/dblpscholar/config_cameras_joint.json --lr 3e-5
+# python train.py --device 0 -m ABLavg/ -c configs/BERT/company/config_company_joint.json --lr 3e-5
 
 
