@@ -233,12 +233,8 @@ class TrainerJoint(BaseTrainer):
                 data, token_ids, attn_mask, target, target_multi1, target_multi2 = inputs['input_ids'].to(self.device), inputs['token_type_ids'].to(self.device), inputs['attention_mask'].to(self.device), inputs['labels'].to(self.device), inputs['label_multi1'].to(self.device), inputs['label_multi2'].to(self.device)
 
                 target = target.transpose(0, 1)
-                if target_multi1.size() == torch.Size([1,1]):
-                    target_multi1 = target_multi1.transpose(0, 1).squeeze(1)
-                    target_multi2 = target_multi2.transpose(0, 1).squeeze(1)
-                else:
-                    target_multi1 = target_multi1.transpose(0, 1).squeeze()
-                    target_multi2 = target_multi2.transpose(0, 1).squeeze()
+                target_multi1 = target_multi1.transpose(0, 1).squeeze()
+                target_multi2 = target_multi2.transpose(0, 1).squeeze()
 
                 with autocast():
                     output_binary, output_multi1, output_multi2 = self.model(data, token_ids, attn_mask)

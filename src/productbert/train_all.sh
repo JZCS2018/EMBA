@@ -93,4 +93,3 @@ python train.py --device 0 -m SurfCon/ -c configs/BERT/company/config_company_jo
 python train.py --device 0 -m SurfCon/ -c configs/BERT/company/config_company_joint.json --lr 8e-5
 
 
-

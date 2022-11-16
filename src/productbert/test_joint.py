@@ -24,7 +24,6 @@ def main(config):
         num_workers=8
     )
 
-    print(config.save_dir)
     # build model architecture
     model = config.init_obj('arch', module_arch)
     logger.info(model)
