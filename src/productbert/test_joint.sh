@@ -34,3 +34,5 @@ python test_joint.py --device 0 -c configs/BERT/monitor/config_monitor_joint_tes
 
 ### company ###
 python test_joint.py --device 0 -c configs/BERT/company/config_company_joint_test.json --resume saved/models/JointBERT-FT-company/0915_165348/model_best.pth
+
+python test_joint.py --device 0 -c configs/BERT/dblpscholar/config_dblpscholar_joint_test.json --resume saved/models/JointBERT-FT-dblpscholar/0915_165348/model_best.pth
