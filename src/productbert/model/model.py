@@ -467,14 +467,6 @@ class JointBertModelLogit(BaseModel):
             str_score = str_score.reshape(-1)
             con_score = con_score.reshape(-1)
             y = ((1 - self.context_gamma) * str_score + self.context_gamma * con_score)
-
-            # interaction_mat = torch.matmul(torch.unsqueeze(sent1_emb[j], 0), torch.transpose(torch.unsqueeze(sent2_emb[j], 0), 1, 2)) 
-            # alpha = F.softmax(interaction_mat, dim=1) 
-            # beta = F.softmax(interaction_mat, dim=2) 
-            # beta_avg = beta.mean(dim=1, keepdim=True) 
-            # gamma = torch.matmul(alpha, beta_avg.transpose(1, 2))
-            # weighted_sum = torch.matmul(torch.transpose(torch.unsqueeze(sent1_emb[j], 0), 1, 2), gamma).squeeze(-1) 
-            # # weighted_sum += emb_st1
             logits_multi1 = self.multi1_cls_layer(torch.mean(sent1_emb[j], 0))
             logits_multi2 = self.multi2_cls_layer(torch.mean(sent2_emb[j], 0))
             res_multi1.append(logits_multi1)
