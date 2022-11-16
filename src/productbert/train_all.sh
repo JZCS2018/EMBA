@@ -54,34 +54,34 @@ python train.py --device 0 -m SurfCon/ -c configs/BERT/shoes/config_shoes_small_
 python train.py --device 0 -m SurfCon/ -c configs/BERT/shoes/config_shoes_small_joint.json --lr 8e-5
 
 
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_large_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_medium_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_small_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_large_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_medium_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/watches/config_watches_small_joint.json --lr 8e-5
 
 
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_large_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_large_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_medium_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_medium_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_small_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_small_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_large_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_large_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_medium_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_small_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/computers/config_computers_small_joint.json --lr 8e-5
 
 
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_xlarge_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_large_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_large_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_medium_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_medium_joint.json --lr 8e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_small_joint.json --lr 3e-5
-python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_small_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_xlarge_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_large_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_large_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_medium_joint.json --lr 8e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_small_joint.json --lr 3e-5
+# python train.py --device 0 -m SurfCon/ -c configs/BERT/cameras/config_cameras_small_joint.json --lr 8e-5
 
 
 
