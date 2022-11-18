@@ -6,9 +6,9 @@ declare -a StringArray=("RoBERTa-FT-cameras-small" "RoBERTa-FT-cameras-medium" "
 #  "JointBERT-FT-computers-small" "JointBERT-FT-computers-medium" "JointBERT-FT-computers-large" 
 # )
 
-declare -a StringArray=(
-"RoBERTa-FT-watches-small" "RoBERTa-FT-watches-medium" "RoBERTa-FT-watches-large" 
-"RoBERTa-FT-watches-xlarge")
+# declare -a StringArray=(
+# "RoBERTa-FT-watches-small" "RoBERTa-FT-watches-medium" "RoBERTa-FT-watches-large" 
+# "RoBERTa-FT-watches-xlarge")
 
 # declare -a StringArray=("JointBERT-FT-cameras-small" "JointBERT-FT-shoes-medium" "JointBERT-FT-shoes-large" 
 # "JointBERT-FT-shoes-xlarge" )
@@ -24,7 +24,26 @@ commd="python test_roberta.py --sdirname Roberta/ --device 0 -c configs/Roberta"
 for dire in "${StringArray[@]}"
 
 do 
-search_dir="saved/Roberta/models/$(basename "$dire")"
+search_dir="saved/ABLavg/models/$(basename "$dire")"
+
+if [[ $search_dir == *"watches"* ]]; then
+
+for entry in "${search_dir}"/*
+do
+if [[ $entry == *"small"* ]]; then
+  $commd/watches/config_watches_small_joint_test.json --resume $entry/model_best.pth
+fi
+if [[ $entry == *"medium"* ]]; then
+  $commd/watches/config_watches_medium_joint_test.json --resume $entry/model_best.pth
+fi
+if [[ $entry == *"large"* ]]; then
+  $commd/watches/config_watches_large_joint_test.json --resume $entry/model_best.pth
+fi
+if [[ $entry == *"xlarge"* ]]; then
+  $commd/watches/config_watches_xlarge_joint_test.json --resume $entry/model_best.pth
+fi
+done
+fi
 
 if [[ $search_dir == *"watches"* ]]; then
 

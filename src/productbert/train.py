@@ -10,14 +10,15 @@ from trainer import TrainerJoint, TrainerJointAOA
 
 import transformers
 
-# fix random seeds for reproducibility
-# SEED = 123
-# torch.manual_seed(SEED)
-# torch.backends.cudnn.deterministic = True
-# torch.backends.cudnn.benchmark = False
-# np.random.seed(SEED)
+
 
 def main(config):
+    # fix random seeds for reproducibility
+    SEED = config.SEED
+    torch.manual_seed(SEED)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    np.random.seed(SEED)
     import model.model as module_arch
     logger = config.get_logger('train')
 
@@ -87,6 +88,8 @@ if __name__ == '__main__':
                       help='indices of GPUs to enable (default: all)')
     args.add_argument('-m', '--sdirname', default=None, type=str,
                     help='prediction for save')
+    args.add_argument('-s', '--seed', default=123, type=int,
+                    help='for reproductivity')
 
     # custom cli options to modify configuration from default values given in json file.
     CustomArgs = collections.namedtuple('CustomArgs', 'flags type target')
