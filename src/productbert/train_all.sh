@@ -170,19 +170,36 @@
 # python train.py --device 0 -m JB/ -s 456 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
 # python train.py --device 0 -m JB/ -s 789 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
 
-### Watches
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
+# ### Watches
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_xlarge_joint.json --lr 3e-5
 
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_large_joint.json --lr 3e-5
 
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_medium_joint.json --lr 3e-5
 
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
+
+### computers
+python train.py --device 0 -m JB/ -s 123 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 456 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 789 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
+
+python train.py --device 0 -m JB/ -s 123 -c configs/BERT/computers/config_computers_large_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 456 -c configs/BERT/computers/config_computers_large_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 789 -c configs/BERT/computers/config_computers_large_joint.json --lr 3e-5
+
+python train.py --device 0 -m JB/ -s 123 -c configs/BERT/computers/config_computers_medium_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 456 -c configs/BERT/computers/config_computers_medium_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 789 -c configs/BERT/computers/config_computers_medium_joint.json --lr 3e-5
+
+python train.py --device 0 -m JB/ -s 123 -c configs/BERT/computers/config_computers_small_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 456 -c configs/BERT/computers/config_computers_small_joint.json --lr 3e-5
+python train.py --device 0 -m JB/ -s 789 -c configs/BERT/computers/config_computers_small_joint.json --lr 3e-5
