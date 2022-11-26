@@ -188,18 +188,36 @@
 # python train.py --device 0 -m JB/ -s 789 -c configs/BERT/watches/config_watches_small_joint.json --lr 3e-5
 
 ### computers
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/computers/config_computers_xlarge_joint.json --lr 3e-5
 
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
 
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
 
-python train.py --device 0 -m JB/ -s 123 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 456 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
-python train.py --device 0 -m JB/ -s 789 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 123 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 456 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
+# python train.py --device 0 -m JB/ -s 789 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
+
+
+python train.py --device 0 -m AOA_1/ -s 123 -c configs/BERT/shoes/config_shoes_xlarge_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 456 -c configs/BERT/shoes/config_shoes_xlarge_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 789 -c configs/BERT/shoes/config_shoes_xlarge_joint.json --lr 3e-5
+
+python train.py --device 0 -m AOA_1/ -s 123 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 456 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 789 -c configs/BERT/shoes/config_shoes_large_joint.json --lr 3e-5
+
+
+python train.py --device 0 -m AOA_1/ -s 123 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 456 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 789 -c configs/BERT/shoes/config_shoes_medium_joint.json --lr 3e-5
+
+python train.py --device 0 -m AOA_1/ -s 123 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 456 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
+python train.py --device 0 -m AOA_1/ -s 789 -c configs/BERT/shoes/config_shoes_small_joint.json --lr 3e-5
