@@ -108,6 +108,9 @@ class TrainerJoint(BaseTrainer):
 
                 loss = loss_binary + loss_multi1 + loss_multi2
 
+                # if loss.isnan():
+                #     print(loss)
+
                 if self.config['trainer']['accumulation_steps'] > 1:
                     loss = loss / self.config['trainer']['accumulation_steps']
                 self.scaler.scale(loss).backward()
