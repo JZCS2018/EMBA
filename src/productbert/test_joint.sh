@@ -1,8 +1,13 @@
-# #!/bin/bash
-# # python test_joint.py --device 0 -c configs/BERT/computers/config_computers_small_joint_test.json --resume saved/models/JointBERT-FT-computers-small/0910_193443/model_best.pth
-# # python test_joint.py --device 0 -c configs/BERT/computers/config_computers_medium_joint_test.json --resume saved/models/JointBERT-FT-computers-medium/0912_065022/model_best.pth
-# # python test_joint.py --device 0 -c configs/BERT/computers/config_computers_large_joint_test.json --resume saved/models/JointBERT-FT-computers-large/0913_235736/model_best.pth
-# # python test_joint.py --device 0 -c configs/BERT/computers/config_computers_xlarge_joint_test.json --resume saved/models/JointBERT-FT-computers-xlarge/0915_132341/model_best.pth
+#!/bin/bash
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_small_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-small/1117_061731/model_best.pth
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_medium_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-medium/1117_031849/model_best.pth
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_large_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-large/1116_184238/model_best.pth
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_xlarge_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-xlarge/1116_040739/model_best.pth
+
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_small_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-small/1117_070302/model_best.pth
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_medium_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-medium/1117_050736/model_best.pth
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_large_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-large/1116_224757/model_best.pth
+python test_joint.py --device 0 -c configs/BERT/computers/config_computers_xlarge_joint_test.json --resume saved/SurfCon/models/JointBERT-FT-computers-xlarge/1116_100612/model_best.pth
 
 
 # # #### Watch####
