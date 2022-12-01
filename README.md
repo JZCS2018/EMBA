@@ -1,4 +1,4 @@
-# Table Learning
+# EMBA
 
 * **Requirements**
 
