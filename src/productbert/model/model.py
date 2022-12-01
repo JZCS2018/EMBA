@@ -116,8 +116,6 @@ class JointBertModelLogit(BaseModel):
             weighted_sum = torch.matmul(torch.transpose(torch.unsqueeze(sent1_emb[j], 0), 1, 2), gamma).squeeze(-1) 
             # weighted_sum += emb_st1
             logits_multi1 = self.multi1_cls_layer(torch.mean(sent1_emb[j], 0))
-            # if logits_multi1.isnan().any():
-            #     print(j)
             logits_multi2 = self.multi2_cls_layer(torch.mean(sent2_emb[j], 0))
             res_multi1.append(logits_multi1)
             res_multi2.append(logits_multi2)
