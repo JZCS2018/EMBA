@@ -76,6 +76,8 @@ class ConfigParser:
             config['trainer']['save_dir'] += args.sdirname
         if args.seed:
             config['seed'] = args.seed
+        if args.modelname:
+            config['arch']['type'] = args.modelname
         
 
         # parse custom cli options into dictionary

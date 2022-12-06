@@ -88,6 +88,8 @@ if __name__ == '__main__':
                       help='indices of GPUs to enable (default: all)')
     args.add_argument('-m', '--sdirname', default=None, type=str,
                     help='prediction for save')
+    args.add_argument('-b', '--modelname', default='EMBA', type=str,
+                    help='module name choice')
     args.add_argument('-s', '--seed', default=123, type=int,
                     help='for reproductivity')
 
